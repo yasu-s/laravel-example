@@ -27,7 +27,8 @@
 		"shardulm94.trailing-spaces",
 		"visualstudioexptteam.vscodeintellicode",
 		"mosapride.zenkaku",
-		"spmeesseman.vscode-taskexplorer"
+		"spmeesseman.vscode-taskexplorer",
+		"cweijan.vscode-mysql-client2"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

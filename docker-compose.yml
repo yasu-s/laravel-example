@@ -1,1 +1,14 @@
 version: '3'
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    ports:
+      - ${DB_PORT:-3306}:3306
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+    environment:
+      - MYSQL_DATABASE=${DB_NAME:-laravel}
+      - MYSQL_ROOT_PASSWORD=${DB_PASS:-password}
+      - TZ=Asia/Tokyo
