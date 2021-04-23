@@ -2,15 +2,11 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.159.0/containers/php
 {
 	"name": "PHP",
-	"build": {
-		"dockerfile": "Dockerfile",
-		"args": {
-			// Update VARIANT to pick a PHP version: 8, 8.0, 7, 7.4, 7.3
-			"VARIANT": "7",
-			"INSTALL_NODE": "true",
-			"NODE_VERSION": "lts/*"
-		}
-	},
+
+	"dockerComposeFile": ["../docker-compose.yml", "docker-compose.extend.yml"],
+	"service": "laravel-server",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
@@ -38,12 +34,12 @@
 	// "forwardPorts": [8080],
 
 	// Use 'portsAttributes' to set default properties for specific forwarded ports. More info: https://code.visualstudio.com/docs/remote/devcontainerjson-reference.
-	"portsAttributes": {
-		"8000": {
-			"label": "Hello Remote World",
-			"onAutoForward": "notify"
-		}
-	},
+	// "portsAttributes": {
+	// 	"8000": {
+	// 		"label": "Hello Remote World",
+	// 		"onAutoForward": "notify"
+	// 	}
+	// },
 
 	// Use 'otherPortsAttributes' to configure any ports that aren't configured using 'portsAttributes'.
 	"otherPortsAttributes": {
