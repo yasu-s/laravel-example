@@ -8,6 +8,16 @@
             "type": "shell",
             "command": "composer install"
         },
+		{
+            "label": "env-artisan migrate",
+            "type": "shell",
+            "command": "php artisan migrate"
+        },
+		{
+            "label": "env-artisan route:list",
+            "type": "shell",
+            "command": "php artisan route:list"
+        },
         {
             "label": "run-serve",
             "type": "shell",
