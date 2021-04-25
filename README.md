@@ -27,6 +27,12 @@ composer install
 php artisan migrate
 ```
 
+### DB初期データ登録
+
+```bash
+php artisan db:seed
+```
+
 ### サーバー起動
 
 ```bash
