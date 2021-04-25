@@ -6,9 +6,28 @@
 
 ## コマンド
 
+### DB起動
+
+```bash
+docker-compose up -d
+```
+
+VSCodeのDev Containerを使用する場合は、このコマンドは不要です。
+
+
+### パッケージインストール
+
 ```bash
 composer install
 ```
+
+### DBマイグレーション
+
+```bash
+php artisan migrate
+```
+
+### サーバー起動
 
 ```bash
 php artisan serve
