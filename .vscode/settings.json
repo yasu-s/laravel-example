@@ -4,5 +4,12 @@
   "editor.tabSize": 4,
   "files.insertFinalNewline": true,
   "files.encoding": "utf8",
-  "files.eol": "\n"
+  "files.eol": "\n",
+  "intelephense.diagnostics.undefinedTypes": false,
+  "intelephense.diagnostics.undefinedFunctions": false,
+  "intelephense.diagnostics.undefinedConstants": false,
+  "intelephense.diagnostics.undefinedClassConstants": false,
+  "intelephense.diagnostics.undefinedMethods": false,
+  "intelephense.diagnostics.undefinedProperties": false,
+  "intelephense.diagnostics.undefinedVariables": false
 }
