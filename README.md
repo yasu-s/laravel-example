@@ -6,30 +6,33 @@
 
 ## コマンド
 
+### envファイルをコピー
+
+```bash
+cp .env-example .env
+```
+
 ### DB起動
 
 ```bash
 docker-compose up -d
 ```
 
-VSCodeのDev Containerを使用する場合は、このコマンドは不要です。
+VSCodeの[Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)を使用する場合は、このコマンドは不要です。Remote Containersを通常通り起動してください。
 
-
-### パッケージインストール
+### 初期設定
 
 ```bash
+# パッケージインストール
 composer install
-```
 
-### DBマイグレーション
+# アプリケーションキー生成
+php artisan key:generate
 
-```bash
+# DBマイグレーション
 php artisan migrate
-```
 
-### DB初期データ登録
-
-```bash
+# DB初期データ登録
 php artisan db:seed
 ```
 
@@ -37,6 +40,23 @@ php artisan db:seed
 
 ```bash
 php artisan serve
+```
+
+## 動作確認
+
+### アクセストークン取得
+
+```bash
+curl --location --request POST 'localhost:8000/api/login' \
+--form 'email="hoge@hoge.com"' \
+--form 'password="password"'
+```
+
+### ログイン済みユーザーデータ取得
+
+```bash
+curl --location --request GET 'localhost:8000/api/user' \
+--header 'Authorization: Bearer <取得したアクセストークン>
 ```
 
 ## 参考URL
