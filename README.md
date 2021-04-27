@@ -63,3 +63,8 @@ curl --location --request GET 'localhost:8000/api/user' \
 
 - https://readouble.com/laravel/8.x/ja/sanctum.html
 
+## メモ
+
+動かない場合、以下の手順を試す。
+- docker/mysql/dataフォルダ内のファイルを削除する。
+- `Remote-Containers: Rebuild Container` を使用してコンテナをリビルドする。
