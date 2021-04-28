@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class SampleRequest extends FormRequest
 {
@@ -36,5 +38,12 @@ class SampleRequest extends FormRequest
             'title.max' => 'title は20文字以内です。',
             'body.required' => 'body は必須項目です。',
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        throw new HttpResponseException(
+            response()->json(['errors' => $validator->errors()->toArray()], 400)
+        );
     }
 }
