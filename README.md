@@ -4,21 +4,23 @@
 
 - laravel練習用
 
-## コマンド
+## 開発環境について
+
+- [Visual Studio Code](https://code.visualstudio.com/) 
+  - [Remote-Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+
+## 環境構築
 
 ### envファイルをコピー
 
 ```bash
-cp .env-example .env
+cp .env.example .env
 ```
 
-### DB起動
+### Remote Containers起動
 
-```bash
-docker-compose up -d
-```
-
-VSCodeの[Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)を使用する場合は、このコマンドは不要です。Remote Containersを通常通り起動してください。
+VSCodeの[Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)をインストールして、Remote Containersを通常通り起動してください。
 
 ### 初期設定
 
@@ -36,13 +38,13 @@ php artisan migrate
 php artisan db:seed
 ```
 
+## 動作確認
+
 ### サーバー起動
 
 ```bash
 php artisan serve
 ```
-
-## 動作確認
 
 ### アクセストークン取得
 

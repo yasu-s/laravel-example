@@ -11,5 +11,6 @@
   "intelephense.diagnostics.undefinedClassConstants": false,
   "intelephense.diagnostics.undefinedMethods": false,
   "intelephense.diagnostics.undefinedProperties": false,
-  "intelephense.diagnostics.undefinedVariables": false
+  "intelephense.diagnostics.undefinedVariables": false,
+  "php-cs-fixer.onsave": true
 }
