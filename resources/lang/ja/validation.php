@@ -13,6 +13,7 @@ return [
     |
     */
 
+    'email' => ':attribute は正しい形式で入力してください。',
     'max' => [
         'string' => ':attribute は :max 文字以内です。',
     ],
