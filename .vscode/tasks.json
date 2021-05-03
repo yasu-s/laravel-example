@@ -23,5 +23,10 @@
             "type": "shell",
             "command": "php artisan serve"
         },
+        {
+            "label": "run-l5-swagger:generate",
+            "type": "shell",
+            "command": "php artisan l5-swagger:generate"
+        },
     ]
 }
